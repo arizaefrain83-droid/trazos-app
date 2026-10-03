@@ -1,38 +1,49 @@
-export type DifficultyLevel = "Básico" | "Intermedio" | "Avanzado";
+export type Difficulty = "Básico" | "Intermedio" | "Avanzado";
 
 export interface Step {
-  id: number;
   instruction: string;
-  imageKey: string; // placeholder key for image
+  tip?: string;
+  /** SVG path data (viewBox 0 0 200 200) added in this step. */
+  paths: string[];
 }
 
-export interface Level {
+export interface Lesson {
   id: string;
   title: string;
-  difficulty: DifficultyLevel;
+  difficulty: Difficulty;
+  skill: { name: string; description: string };
   steps: Step[];
-  stars: number; // 1-3 stars awarded on completion
+  checklist: string[];
+  extraPractice: string;
 }
 
-export interface Category {
+export interface Course {
   id: string;
+  kind: "intro" | "path";
   name: string;
-  emoji: string;
+  tagline: string;
   color: string;
-  levels: Level[];
+  soft: string;
+  lessons: Lesson[];
 }
 
-export interface LevelProgress {
-  levelId: string;
+export interface LessonProgress {
+  lessonId: string;
   completed: boolean;
   stars: number;
   completedAt?: string;
 }
 
-export interface GalleryPhoto {
+export interface JournalEntry {
   id: string;
   uri: string;
-  levelId: string;
-  categoryId: string;
+  lessonId: string;
+  courseId: string;
   createdAt: string;
+}
+
+export interface Settings {
+  onboarded: boolean;
+  name: string;
+  interests: string[];
 }

@@ -1,54 +1,35 @@
 export const COLORS = {
-  background: "#FFF8F0",
+  bg: "#FBF8F3",
   surface: "#FFFFFF",
-  primary: "#FF7B54",
-  secondary: "#4CAF87",
-  accent: "#9B59B6",
-  warning: "#F1C40F",
-  text: "#2C2C2C",
-  textLight: "#777777",
-  textMuted: "#BBBBBB",
-  border: "#E8E8E8",
-  locked: "#D0D0D0",
-  lockedBg: "#F5F5F5",
-  star: "#FFD700",
-  starEmpty: "#E0E0E0",
+  ink: "#24273A",
+  inkSoft: "#5D6177",
+  muted: "#9A9DB0",
+  line: "#ECE7DF",
+  paper: "#FFFDF9",
+  primary: "#5B6CFF",
+  primaryDark: "#4453E0",
+  success: "#2FB57F",
+  danger: "#E5484D",
+  star: "#FFC233",
+  locked: "#C9CBD6",
+  lockedBg: "#F1F0EE",
   white: "#FFFFFF",
-  black: "#000000",
-  shadow: "rgba(0,0,0,0.08)",
 };
 
-export const FONTS = {
-  sizes: {
-    xs: 11,
-    sm: 13,
-    md: 15,
-    lg: 18,
-    xl: 22,
-    xxl: 28,
-    huge: 36,
-  },
-  weights: {
-    regular: "400" as const,
-    medium: "500" as const,
-    bold: "700" as const,
-    heavy: "800" as const,
-  },
+export const FONT = {
+  regular: "Nunito_600SemiBold",
+  bold: "Nunito_800ExtraBold",
+  black: "Nunito_900Black",
 };
 
-export const SPACING = {
-  xs: 4,
-  sm: 8,
-  md: 16,
-  lg: 24,
-  xl: 32,
-  xxl: 48,
-};
+export const SPACING = { xs: 4, sm: 8, md: 16, lg: 24, xl: 32, xxl: 48 };
 
-export const RADIUS = {
-  sm: 8,
-  md: 12,
-  lg: 16,
-  xl: 24,
-  full: 9999,
+export const RADIUS = { sm: 10, md: 16, lg: 22, xl: 28, full: 999 };
+
+export const SHADOW = {
+  shadowColor: "#24273A",
+  shadowOffset: { width: 0, height: 4 },
+  shadowOpacity: 0.08,
+  shadowRadius: 12,
+  elevation: 3,
 };
